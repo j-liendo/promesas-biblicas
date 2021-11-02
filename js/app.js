@@ -236,15 +236,6 @@ const verses = [
     "Apocalipsis 3:20",
 ];
 
-const getRandomPhoto = (verse, photoList = photos) => {
-    let url = photoList[Math.floor(Math.random() * photoList.length)];
-    fetch(url)
-        .then(data => {
-
-            printOnScreen(verse, data.url);
-        })
-};
-
 const getRandomVerse = (verseList = verses) => {
     $("#new-verse").prop("disabled", true);
     let verse = verseList[Math.floor(Math.random() * verseList.length)];
@@ -271,6 +262,19 @@ const getRandomVerse = (verseList = verses) => {
             console.warn(error);
         });
 };
+const getRandomPhoto = (verse, photoList = photos) => {
+    let url = photoList[Math.floor(Math.random() * photoList.length)];
+    fetch(url)
+        .then(data => {
+
+            printOnScreen(verse, data.url);
+        })
+        .catch((error) => {
+            showAlert();
+            console.warn(error);
+        });
+};
+
 
 const printOnScreen = (verse, photo) => {
     console.log(verse, photo);
