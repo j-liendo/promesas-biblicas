@@ -328,7 +328,7 @@ const photosUrl = () => {
 $(document).ready(function() {
     console.log("conncet");
 
-    // getRandomVerse()
+    getRandomVerse()
 
     $("#new-verse").on("click", () => {
         hideAlert();
