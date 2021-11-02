@@ -290,7 +290,7 @@ const printOnScreen = (verse, photo) => {
     });
 
     $(".bg").animate({ opacity: 0 }, 600, function() {
-        $(".bg").css("background-image", "url('" + photo + "')");
+        setTimeout($(".bg").css("background-image", "url('" + photo + "')"), 100)
         $(".bg").animate({ opacity: 1 }, 600);
     });
 
