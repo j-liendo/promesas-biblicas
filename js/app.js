@@ -211,7 +211,6 @@ const verses = [
     "1 Cor 4:7",
     "1 Cor 10:13",
     "2 Cor 7:1",
-    "2 Cor 9:6-8",
     "Efesios 6:2",
     "Filipenses 4:6-7",
     "Filipenses 4:19",
