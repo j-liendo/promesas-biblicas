@@ -262,6 +262,8 @@ const getRandomVerse = (verseList = verses) => {
             console.warn(error);
         });
 };
+
+// Accept a verse from getRandomVerse()
 const getRandomPhoto = (verse, photoList = photos) => {
     let url = photoList[Math.floor(Math.random() * photoList.length)];
     fetch(url)
@@ -279,12 +281,10 @@ const getRandomPhoto = (verse, photoList = photos) => {
 const printOnScreen = (verse, photo) => {
     console.log(verse, photo);
 
+    // Head and body of versicle
     let head = verse.head;
     let text = verse.text;
 
-    // console.log(text, head);
-
-    console.log(text);
     $("#text").fadeOut(function() {
         $(this).text(text).fadeIn();
     });

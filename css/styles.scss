@@ -1,0 +1,36 @@
+body {
+    background: black;
+}
+
+.bg2 {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px 0;
+}
+
+.bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* transition: background 0.5s linear; */
+}
+
+#quote-box {
+    max-width: 550px;
+    min-width: 150px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 10px;
+    backdrop-filter: blur(5px)
+}
+
+#alert {
+    bottom: -100px;
+    display: flex;
+    transition: 1s;
+}
