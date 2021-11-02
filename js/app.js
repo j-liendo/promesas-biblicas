@@ -239,7 +239,11 @@ const verses = [
 
 const getRandomPhoto = (verse, photoList = photos) => {
     let url = photoList[Math.floor(Math.random() * photoList.length)];
-    printOnScreen(verse, url);
+    fetch(url)
+        .then(data => {
+
+            printOnScreen(verse, data.url);
+        })
 };
 
 const getRandomVerse = (verseList = verses) => {
