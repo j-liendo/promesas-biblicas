@@ -242,7 +242,7 @@ const getRandomVerse = (verseList = verses) => {
 
     // Biblia.com API request
     fetch(
-            "https://api.biblia.com/v1/bible/content/RVR60.txt.js?passage=" +
+            "https://api.biblia.com/v1/bible/content/RVA.txt.js?passage=" +
             verse.replace(/\s/g, "") +
             "&key=d86d581ef490d1f2a63a99ced904b1d8"
         )
@@ -293,7 +293,7 @@ const printOnScreen = (verse, photo) => {
     });
 
     $(".bg").animate({ opacity: 0 }, 500, function() {
-        setTimeout($(".bg").css("background-image", "url('" + photo + "')"), 200)
+        setTimeout(() => $(".bg").css("background-image", "url('" + photo + "')"), 200)
         $(".bg").animate({ opacity: 1 }, 500);
     });
 
