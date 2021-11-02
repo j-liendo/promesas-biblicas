@@ -289,9 +289,9 @@ const printOnScreen = (verse, photo) => {
         $(this).text(`—${head}`).fadeIn();
     });
 
-    $(".bg").animate({ opacity: 0 }, 600, function() {
-        setTimeout($(".bg").css("background-image", "url('" + photo + "')"), 100)
-        $(".bg").animate({ opacity: 1 }, 600);
+    $(".bg").animate({ opacity: 0 }, 500, function() {
+        setTimeout($(".bg").css("background-image", "url('" + photo + "')"), 200)
+        $(".bg").animate({ opacity: 1 }, 500);
     });
 
     enabledBtn();
